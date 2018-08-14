@@ -1,0 +1,15 @@
+<!-- app/views/restaurants/show.html.erb -->
+<div class="container">
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+
+   <% if @task.completed == true  %>
+      <%=  '<i class="far fa-check-square"></i> completed'.html_safe %>
+    <% else %>
+      <%= '<i class="far fa-square"></i> not completed'.html_safe %>
+    <% end %>
+
+  <p><%= link_to "back to list", tasks_path%></p>
+
+  <p><%= link_to "edit this task", edit_path%></p>
+</div>
